@@ -1,0 +1,6 @@
+{
+  "name": "Palabre",
+  "description": "A real-world cultural treasure hunt powered by AI. Real humans, real voices, living oral memory.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

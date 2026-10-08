@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-label="PALABRE core loop: mission, real human, voice, AI orchestrator, cultural knowledge, next mission">
+  <defs>
+    <style>
+      .cl-title { font-family: Syne,'Arial Black',Impact,sans-serif; font-weight:800; font-size:21px; fill:#F2EEE8; }
+      .cl-sub   { font-family:'Plus Jakarta Sans',Inter,Arial,sans-serif; font-size:13.5px; fill:#A39E96; }
+      .cl-num   { font-family:'Plus Jakarta Sans',Inter,Arial,sans-serif; font-size:13px; font-weight:800; fill:#FF6B35; letter-spacing:1px; }
+      .cl-box   { fill:#141414; stroke:#242220; stroke-width:2; }
+      .cl-box--ai { fill:#1A1210; stroke:#FF6B35; stroke-width:2.5; }
+      @keyframes cl-run { to { stroke-dashoffset: -628; } }
+      .cl-track { stroke-dasharray: 14 10; animation: cl-run 6s linear infinite; }
+      @keyframes cl-blink { 0%,100% { opacity:.4;} 50% { opacity:1;} }
+      .cl-center-dot { animation: cl-blink 2.2s ease-in-out infinite; }
+    </style>
+    <path id="cl-cycle" d="M170,280 A430,190 0 0 1 1030,280 A430,190 0 0 1 170,280"/>
+  </defs>
+
+  <rect width="1200" height="560" fill="#090909"/>
+
+  <!-- Cycle track -->
+  <use href="#cl-cycle" fill="none" stroke="#242220" stroke-width="4"/>
+  <use class="cl-track" href="#cl-cycle" fill="none" stroke="#FF6B35" stroke-width="4"
+       stroke-linecap="round" opacity=".85"/>
+
+  <!-- Traveling explorer dot -->
+  <circle r="8" fill="#F2EEE8" stroke="#FF6B35" stroke-width="3" opacity="0">
+    <animateMotion dur="12s" repeatCount="indefinite"><mpath href="#cl-cycle"/></animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.03;0.94;1" dur="12s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Direction arrows -->
+  <g fill="#FF6B35">
+    <path d="M-11,-9 L9,0 L-11,9 Z" transform="translate(815,115.5) rotate(14.3)"/>
+    <path d="M-11,-9 L9,0 L-11,9 Z" transform="translate(1030,280) rotate(90)"/>
+    <path d="M-11,-9 L9,0 L-11,9 Z" transform="translate(815,444.5) rotate(165.7)"/>
+    <path d="M-11,-9 L9,0 L-11,9 Z" transform="translate(385,444.5) rotate(194.3)"/>
+    <path d="M-11,-9 L9,0 L-11,9 Z" transform="translate(170,280) rotate(270)"/>
+    <path d="M-11,-9 L9,0 L-11,9 Z" transform="translate(385,115.5) rotate(345.7)"/>
+  </g>
+
+  <!-- Center label -->
+  <g text-anchor="middle">
+    <circle class="cl-center-dot" cx="600" cy="280" r="7" fill="#FF6B35"/>
+    <text x="600" y="315" font-family="Syne,'Arial Black',Impact,sans-serif" font-size="26"
+          font-weight="800" letter-spacing="6" fill="#2B2825">CORE LOOP</text>
+    <text x="600" y="342" class="cl-sub" fill="#77736D">screen down · voices up</text>
+  </g>
+
+  <!-- 1 · MISSION -->
+  <g>
+    <rect class="cl-box" x="485" y="44" width="230" height="92" rx="18"/>
+    <text class="cl-num" x="505" y="72">01</text>
+    <text class="cl-title" x="505" y="98">MISSION</text>
+    <text class="cl-sub" x="505" y="121">Put your phone down, walk out</text>
+  </g>
+
+  <!-- 2 · REAL HUMAN -->
+  <g>
+    <rect class="cl-box" x="857" y="139" width="230" height="92" rx="18"/>
+    <text class="cl-num" x="877" y="167">02</text>
+    <text class="cl-title" x="877" y="193">REAL HUMAN</text>
+    <text class="cl-sub" x="877" y="216">Ask something meaningful</text>
+  </g>
+
+  <!-- 3 · VOICE -->
+  <g>
+    <rect class="cl-box" x="857" y="329" width="230" height="92" rx="18"/>
+    <text class="cl-num" x="877" y="357">03</text>
+    <text class="cl-title" x="877" y="383">VOICE</text>
+    <text class="cl-sub" x="877" y="406">Record the spoken answer</text>
+  </g>
+
+  <!-- 4 · AI ORCHESTRATOR -->
+  <g>
+    <rect class="cl-box cl-box--ai" x="485" y="424" width="230" height="92" rx="18"/>
+    <text class="cl-num" x="505" y="452">04</text>
+    <text class="cl-title" x="505" y="478">AI ORCHESTRATOR</text>
+    <text class="cl-sub" x="505" y="501">Ollama · Qwen · DeepSeek · GLM</text>
+  </g>
+
+  <!-- 5 · CULTURAL KNOWLEDGE -->
+  <g>
+    <rect class="cl-box" x="113" y="329" width="230" height="92" rx="18"/>
+    <text class="cl-num" x="133" y="357">05</text>
+    <text class="cl-title" x="133" y="383" font-size="17.5" textLength="186" lengthAdjust="spacingAndGlyphs">CULTURAL KNOWLEDGE</text>
+    <text class="cl-sub" x="133" y="406">Proverb, memory, craft saved</text>
+  </g>
+
+  <!-- 6 · NEXT MISSION -->
+  <g>
+    <rect class="cl-box" x="113" y="139" width="230" height="92" rx="18"/>
+    <text class="cl-num" x="133" y="167">06</text>
+    <text class="cl-title" x="133" y="193">NEXT MISSION</text>
+    <text class="cl-sub" x="133" y="216">Chained from that very story</text>
+  </g>
+</svg>

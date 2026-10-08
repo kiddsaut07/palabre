@@ -1,0 +1,116 @@
+{
+  "entities": {
+    "Story": {
+      "title": "Story",
+      "description": "An oral cultural story collected from a real human during a Palabre quest.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the story"
+        },
+        "sessionId": {
+          "type": "string",
+          "description": "Anonymous or authenticated session identifier"
+        },
+        "userId": {
+          "type": "string",
+          "description": "Firebase user ID if signed in"
+        },
+        "missionNumber": {
+          "type": "number",
+          "description": "Sequential quest step number"
+        },
+        "missionText": {
+          "type": "string",
+          "description": "The exact quest mission given to the user"
+        },
+        "audioDurationSec": {
+          "type": "number",
+          "description": "Duration of recorded audio in seconds"
+        },
+        "audioMimeType": {
+          "type": "string",
+          "description": "MIME type of recorded audio"
+        },
+        "transcript": {
+          "type": "string",
+          "description": "Verbatim transcript of the human speaker"
+        },
+        "theme": {
+          "type": "string",
+          "description": "Extracted cultural theme"
+        },
+        "extracted": {
+          "type": "string",
+          "description": "Core extracted wisdom, proverb, or life lesson"
+        },
+        "summary": {
+          "type": "string",
+          "description": "Concise summary of the shared experience"
+        },
+        "culturalSignificance": {
+          "type": "string",
+          "description": "Context and community significance of the story"
+        },
+        "nextMission": {
+          "type": "string",
+          "description": "Generated follow-up quest mission derived from the story"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the story was analyzed and recorded"
+        }
+      },
+      "required": ["sessionId", "missionNumber", "missionText", "transcript", "theme", "extracted", "summary", "culturalSignificance", "nextMission", "createdAt"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Profile of an explorer who signs in to preserve their oral history trail.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Firebase user UID"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Explorer display name"
+        },
+        "email": {
+          "type": "string",
+          "description": "Explorer email"
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "Avatar URL"
+        },
+        "storiesCount": {
+          "type": "number",
+          "description": "Number of stories captured by this explorer"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Account creation timestamp"
+        }
+      },
+      "required": ["id", "displayName", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/stories/{storyId}": {
+      "schema": {
+        "$ref": "#/entities/Story"
+      },
+      "description": "Public archive of cultural stories collected across neighborhoods."
+    },
+    "/users/{userId}": {
+      "schema": {
+        "$ref": "#/entities/UserProfile"
+      },
+      "description": "User profile data accessible to the user."
+    }
+  }
+}

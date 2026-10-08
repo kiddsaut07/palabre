@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #090909;
+    --text-primary: #F2EEE8;
+    --accent: #FF6B35;
+    --muted: #77736D;
+    --surface: #141414;
+    --border: #242220;
+  }
+
+  body {
+    background-color: #090909;
+    color: #F2EEE8;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-editorial {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.font-display {
+  font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom pulse animations for recording */
+@keyframes recordPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 18px rgba(255, 107, 53, 0);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+    transform: scale(1);
+  }
+}
+
+.animate-record-pulse {
+  animation: recordPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

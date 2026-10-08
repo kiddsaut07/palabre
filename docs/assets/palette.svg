@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="PALABRE design system: color palette and typography">
+  <defs>
+    <style>
+      .p-tag  { font-family:'Plus Jakarta Sans',Inter,Arial,sans-serif; fill:#FF6B35; font-size:12px; font-weight:800; letter-spacing:3px; }
+      .p-name { font-family:'Plus Jakarta Sans',Inter,Arial,sans-serif; fill:#F2EEE8; font-size:15px; font-weight:700; }
+      .p-hex  { font-family:ui-monospace,'SFMono-Regular',Menlo,monospace; fill:#77736D; font-size:13px; }
+      .p-label{ font-family:'Plus Jakarta Sans',Inter,Arial,sans-serif; fill:#77736D; font-size:12px; font-weight:700; letter-spacing:2px; }
+      @keyframes p-sheen { 0% { transform: translateX(-120%);} 100% { transform: translateX(320%);} }
+      .p-sheen { animation: p-sheen 3.2s ease-in-out infinite; }
+    </style>
+    <clipPath id="p-clip"><rect x="40" y="70" width="170" height="96" rx="14"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="360" fill="#090909"/>
+
+  <text x="40" y="44" class="p-tag">DESIGN SYSTEM</text>
+  <rect x="40" y="52" width="1120" height="2" fill="#1C1A18"/>
+
+  <!-- Swatches -->
+  <g>
+    <rect x="40" y="70" width="170" height="96" rx="14" fill="#090909" stroke="#242220" stroke-width="2"/>
+    <g clip-path="url(#p-clip)"><rect class="p-sheen" x="40" y="70" width="60" height="96" fill="#FF6B35" opacity=".14"/></g>
+    <text x="40" y="196" class="p-name">Ink</text><text x="40" y="218" class="p-hex">#090909</text>
+  </g>
+  <g>
+    <rect x="230" y="70" width="170" height="96" rx="14" fill="#141414" stroke="#242220" stroke-width="2"/>
+    <text x="230" y="196" class="p-name">Surface</text><text x="230" y="218" class="p-hex">#141414</text>
+  </g>
+  <g>
+    <rect x="420" y="70" width="170" height="96" rx="14" fill="#242220" stroke="#2B2825" stroke-width="2"/>
+    <text x="420" y="196" class="p-name">Border</text><text x="420" y="218" class="p-hex">#242220</text>
+  </g>
+  <g>
+    <rect x="610" y="70" width="170" height="96" rx="14" fill="#FF6B35"/>
+    <text x="610" y="196" class="p-name">Flame</text><text x="610" y="218" class="p-hex">#FF6B35</text>
+  </g>
+  <g>
+    <rect x="800" y="70" width="170" height="96" rx="14" fill="#F2EEE8"/>
+    <text x="800" y="196" class="p-name">Bone</text><text x="800" y="218" class="p-hex">#F2EEE8</text>
+  </g>
+  <g>
+    <rect x="990" y="70" width="170" height="96" rx="14" fill="#A39E96"/>
+    <text x="990" y="196" class="p-name">Muted</text><text x="990" y="218" class="p-hex">#A39E96</text>
+  </g>
+
+  <!-- Typography -->
+  <text x="40" y="262" class="p-label">TYPOGRAPHY</text>
+  <rect x="40" y="272" width="1120" height="1" fill="#1C1A18"/>
+
+  <text x="40" y="316" font-family="Syne,'Arial Black',Impact,sans-serif" font-size="34" font-weight="800" fill="#F2EEE8">Syne</text>
+  <text x="40" y="340" class="p-hex">display · uppercase · tracking-tight</text>
+
+  <text x="430" y="316" font-family="Fraunces,Georgia,'Times New Roman',serif" font-size="34" font-style="italic" fill="#FF6B35">Fraunces</text>
+  <text x="430" y="340" class="p-hex">editorial · oral quotes</text>
+
+  <text x="820" y="316" font-family="'Plus Jakarta Sans',Inter,Arial,sans-serif" font-size="30" font-weight="600" fill="#D4CEC5">Plus Jakarta Sans</text>
+  <text x="820" y="340" class="p-hex">UI · body · captions</text>
+</svg>

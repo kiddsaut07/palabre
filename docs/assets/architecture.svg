@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-label="PALABRE architecture: React client, Express API, AI orchestrator, providers and speech-to-text">
+  <defs>
+    <marker id="ar-h" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#FF6B35"/>
+    </marker>
+    <style>
+      .a-h    { font-family: Syne,'Arial Black',Impact,sans-serif; font-weight:800; fill:#F2EEE8; }
+      .a-t    { font-family:'Plus Jakarta Sans',Inter,Arial,sans-serif; fill:#A39E96; font-size:13px; }
+      .a-lead { font-family:'Plus Jakarta Sans',Inter,Arial,sans-serif; fill:#FF6B35; font-size:12px; font-weight:800; letter-spacing:2.5px; }
+      .a-card { fill:#141414; stroke:#242220; stroke-width:2; }
+      .a-api  { fill:#17130F; stroke:#FF6B35; stroke-width:2; }
+      .a-pill { fill:#0F0E0D; stroke:#2B2825; stroke-width:1.5; }
+      .a-pill--local { fill:#1F1410; stroke:#FF6B35; stroke-width:2; }
+      @keyframes a-dash { to { stroke-dashoffset: -64; } }
+      .a-flow { stroke-dasharray: 10 8; animation: a-dash 1.6s linear infinite; }
+      .a-pkt  { fill:#FF6B35; }
+    </style>
+    <path id="p1" d="M300,300 H344"/>
+    <path id="p2" d="M610,300 H654"/>
+    <path id="p3" d="M930,300 H955 V117 H974"/>
+  </defs>
+
+  <rect width="1200" height="620" fill="#090909"/>
+
+  <text x="40" y="56" class="a-h" font-size="30" letter-spacing="1">REQUEST FLOW</text>
+  <text x="40" y="84" class="a-t">POST /api/analyze — no API key ever reaches the browser</text>
+  <rect x="40" y="100" width="1120" height="2" fill="#1C1A18"/>
+
+  <!-- CLIENT -->
+  <g>
+    <rect class="a-card" x="40" y="150" width="260" height="300" rx="20"/>
+    <text x="64" y="192" class="a-lead">CLIENT</text>
+    <text x="64" y="226" class="a-h" font-size="22">React 19 + Vite</text>
+    <text x="64" y="266" class="a-t">▸ Consent screen (verbal)</text>
+    <text x="64" y="296" class="a-t">▸ Recorder · Field proof GPS</text>
+    <text x="64" y="326" class="a-t">▸ Result · Oral archive</text>
+    <rect x="64" y="356" width="212" height="60" rx="12" fill="#0F0E0D" stroke="#242220"/>
+    <text x="80" y="382" class="a-t" fill="#D4CEC5">FormData: audio + mission</text>
+    <text x="80" y="404" class="a-t" fill="#D4CEC5">+ outdoorDurationSec, distanceM</text>
+  </g>
+
+  <!-- API -->
+  <g>
+    <rect class="a-api" x="350" y="150" width="260" height="300" rx="20"/>
+    <text x="374" y="192" class="a-lead">SERVER</text>
+    <text x="374" y="226" class="a-h" font-size="22">Express API</text>
+    <text x="374" y="266" class="a-t">▸ rate limit · multer 25 MB</text>
+    <text x="374" y="296" class="a-t">▸ voice saved → data/audio/</text>
+    <text x="374" y="326" class="a-t">▸ story persisted → stories.json</text>
+    <text x="374" y="356" class="a-t">▸ proof attached to the story</text>
+    <rect x="374" y="382" width="212" height="34" rx="17" fill="#0F0E0D" stroke="#FF6B35" stroke-opacity=".5"/>
+    <text x="480" y="404" text-anchor="middle" class="a-t" fill="#FF6B35">GET /audio/&lt;file&gt;</text>
+  </g>
+
+  <!-- ORCHESTRATOR -->
+  <g>
+    <rect class="a-card" x="660" y="120" width="270" height="360" rx="20"/>
+    <text x="684" y="162" class="a-lead">ENGINE</text>
+    <text x="684" y="196" class="a-h" font-size="22">AI Orchestrator</text>
+    <text x="684" y="234" class="a-t">▸ capability routing</text>
+    <text x="684" y="262" class="a-t">▸ health cache + monitor</text>
+    <text x="684" y="290" class="a-t">▸ strict JSON sanitization</text>
+    <rect x="684" y="316" width="222" height="1" fill="#242220"/>
+    <text x="684" y="346" class="a-t" fill="#F2EEE8" font-weight="700">Automatic fallback cascade</text>
+    <text x="684" y="374" class="a-t">timeout / 5xx / bad JSON →</text>
+    <text x="684" y="400" class="a-t">next configured provider</text>
+    <rect x="684" y="420" width="222" height="34" rx="17" fill="#0F0E0D" stroke="#242220"/>
+    <text x="795" y="442" text-anchor="middle" class="a-t">AI_PROVIDER=auto</text>
+  </g>
+
+  <!-- PROVIDERS -->
+  <g>
+    <text x="980" y="76" class="a-lead">PROVIDERS</text>
+
+    <rect class="a-pill--local" x="980" y="94" width="180" height="46" rx="14"/>
+    <text x="998" y="123" class="a-h" font-size="16" fill="#FF6B35">Ollama · local</text>
+
+    <rect class="a-pill" x="980" y="152" width="180" height="46" rx="14"/>
+    <text x="998" y="181" class="a-h" font-size="16">Qwen</text>
+
+    <rect class="a-pill" x="980" y="210" width="180" height="46" rx="14"/>
+    <text x="998" y="239" class="a-h" font-size="16">DeepSeek</text>
+
+    <rect class="a-pill" x="980" y="268" width="180" height="46" rx="14"/>
+    <text x="998" y="297" class="a-h" font-size="16">GLM</text>
+
+    <rect class="a-pill" x="980" y="326" width="180" height="46" rx="14"/>
+    <text x="998" y="355" class="a-h" font-size="16">Gemini · fallback</text>
+  </g>
+
+  <!-- STT -->
+  <g>
+    <text x="660" y="524" class="a-lead">SPEECH-TO-TEXT</text>
+    <rect class="a-pill--local" x="660" y="540" width="270" height="46" rx="14"/>
+    <text x="678" y="569" class="a-h" font-size="15" fill="#FF6B35">faster-whisper (local)</text>
+    <rect class="a-pill" x="660" y="540" width="270" height="46" rx="14" fill="none" stroke="none"/>
+    <rect class="a-pill" x="980" y="404" width="180" height="46" rx="14"/>
+    <text x="998" y="433" class="a-h" font-size="15">Gemini STT</text>
+    <path d="M660,563 H610 V470" fill="none" stroke="#242220" stroke-width="2" marker-end="url(#ar-h)" class="a-flow"/>
+  </g>
+
+  <!-- Connectors -->
+  <g fill="none" stroke="#FF6B35" stroke-width="2.5" marker-end="url(#ar-h)">
+    <use href="#p1" class="a-flow"/>
+    <use href="#p2" class="a-flow"/>
+    <use href="#p3" class="a-flow"/>
+  </g>
+
+  <!-- Travelling packets -->
+  <circle class="a-pkt" r="6" opacity="0">
+    <animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.9;1" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="a-pkt" r="6" opacity="0">
+    <animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.9;1" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="a-pkt" r="6" opacity="0">
+    <animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.9;1" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <text x="40" y="600" class="a-t" fill="#77736D">Cascade order: ollama → qwen → deepseek → glm → gemini (unconfigured providers are skipped silently)</text>
+</svg>

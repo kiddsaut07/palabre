@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="PALABRE — Your phone knows the internet. Your neighborhood knows the stories.">
+  <defs>
+    <radialGradient id="bn-glow" cx="78%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity=".30"/>
+      <stop offset="60%" stop-color="#FF6B35" stop-opacity=".06"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bn-rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="bn-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#2B2825"/>
+    </pattern>
+    <path id="bn-route" d="M735 345 C 815 335, 835 255, 905 250 S 1015 265, 1040 195 S 1075 120, 1118 104"/>
+    <style>
+      @keyframes bn-march { to { stroke-dashoffset: -64; } }
+      .bn-line { animation: bn-march 1.8s linear infinite; }
+      @keyframes bn-blink { 0%,100% { opacity:.35;} 50% { opacity:1;} }
+      .bn-rec { animation: bn-blink 1.4s steps(1,end) infinite; }
+      @keyframes bn-chip { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-4px);} }
+      .bn-chip { animation: bn-chip 3.4s ease-in-out infinite; }
+      .bn-chip:nth-of-type(2) { animation-delay: .5s; }
+      .bn-chip:nth-of-type(3) { animation-delay: 1s; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" fill="#090909"/>
+  <rect width="1200" height="420" fill="url(#bn-dots)" opacity=".55"/>
+  <rect width="1200" height="420" fill="url(#bn-glow)"/>
+  <rect x="0" y="417" width="1200" height="3" fill="url(#bn-rule)"/>
+
+  <!-- Recording badge -->
+  <g>
+    <rect x="72" y="66" width="262" height="40" rx="20" fill="#1F1410" stroke="#FF6B35" stroke-opacity=".55"/>
+    <circle class="bn-rec" cx="96" cy="86" r="6" fill="#FF6B35"/>
+    <text x="114" y="92" font-family="'Plus Jakarta Sans',Inter,Arial,sans-serif" font-size="15"
+          letter-spacing="3" fill="#FF6B35" font-weight="700">LIVE ORAL ARCHIVE</text>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="66" y="212" font-family="Syne,'Arial Black',Impact,sans-serif" font-size="116"
+        font-weight="800" letter-spacing="6" fill="#F2EEE8">PALABRE</text>
+
+  <!-- Tagline -->
+  <text x="72" y="262" font-family="'Plus Jakarta Sans',Inter,Arial,sans-serif" font-size="24" fill="#A39E96">
+    Your phone knows the internet.
+  </text>
+  <text x="72" y="296" font-family="'Plus Jakarta Sans',Inter,Arial,sans-serif" font-size="24"
+        font-weight="700" fill="#FF6B35">Your neighborhood knows the stories.</text>
+
+  <!-- Animated route: home → neighborhood -->
+  <g>
+    <use href="#bn-route" fill="none" stroke="#242220" stroke-width="6" stroke-linecap="round"/>
+    <use class="bn-line" href="#bn-route" fill="none" stroke="#FF6B35" stroke-width="6"
+         stroke-linecap="round" stroke-dasharray="18 14"/>
+
+    <!-- Home marker -->
+    <g transform="translate(720 330)">
+      <rect x="0" y="0" width="34" height="30" rx="6" fill="#141414" stroke="#F2EEE8" stroke-width="3"/>
+      <path d="M-6 2 L17 -14 L40 2" fill="none" stroke="#F2EEE8" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="17" cy="16" r="5" fill="#FF6B35"/>
+    </g>
+
+    <!-- Destination pin -->
+    <g transform="translate(1118 74)">
+      <path d="M0 46 C -16 24, -24 16, -24 2 A24 24 0 1 1 24 2 C 24 16, 16 24, 0 46 Z"
+            fill="#FF6B35" stroke="#090909" stroke-width="3"/>
+      <circle cx="0" cy="2" r="8" fill="#090909"/>
+      <ellipse cx="0" cy="54" rx="16" ry="4" fill="#FF6B35" opacity=".35">
+        <animate attributeName="rx" values="10;20;10" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".45;.05;.45" dur="2.4s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- Walking explorer -->
+    <circle r="9" fill="#F2EEE8" stroke="#FF6B35" stroke-width="3">
+      <animateMotion dur="5.5s" repeatCount="indefinite" rotate="auto"
+                     keyPoints="0;1;1" keyTimes="0;0.55;1" calcMode="linear">
+        <mpath href="#bn-route"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.55;0.6" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Value chips -->
+  <g class="bn-chip">
+    <rect x="72" y="344" width="176" height="36" rx="18" fill="#141414" stroke="#242220"/>
+    <text x="160" y="367" text-anchor="middle" font-family="'Plus Jakarta Sans',Inter,Arial,sans-serif"
+          font-size="14" font-weight="700" fill="#D4CEC5">OPEN-SOURCE AI</text>
+  </g>
+  <g class="bn-chip">
+    <rect x="262" y="344" width="164" height="36" rx="18" fill="#141414" stroke="#242220"/>
+    <text x="344" y="367" text-anchor="middle" font-family="'Plus Jakarta Sans',Inter,Arial,sans-serif"
+          font-size="14" font-weight="700" fill="#D4CEC5">FIELD PROOF</text>
+  </g>
+  <g class="bn-chip">
+    <rect x="440" y="344" width="212" height="36" rx="18" fill="#141414" stroke="#242220"/>
+    <text x="546" y="367" text-anchor="middle" font-family="'Plus Jakarta Sans',Inter,Arial,sans-serif"
+          font-size="14" font-weight="700" fill="#D4CEC5">YAOUNDÉ &amp; BEYOND</text>
+  </g>
+</svg>
