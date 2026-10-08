@@ -14,6 +14,7 @@
   <img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Express-4-141414.svg?style=for-the-badge&logo=express&logoColor=F2EEE8" alt="Express" />
   <img src="https://img.shields.io/badge/Tests-48%20passing-1B4332.svg?style=for-the-badge" alt="48 tests passing" />
+  <a href="https://palabre.onrender.com"><img src="https://img.shields.io/badge/Render-Live%20Demo-FF6B35.svg?style=for-the-badge&logo=render&logoColor=white" alt="Deployed on Render — live demo" /></a>
 </p>
 
 <p align="center">
@@ -21,6 +22,13 @@
   <img src="https://img.shields.io/badge/Th%C3%A8me-IA%20open%20source%20%C2%B7%20sortir%20de%20chez%20soi-141414.svg?style=for-the-badge&labelColor=FF6B35&color=242220" alt="Hackathon theme: open-source AI that gets people outside" />
   <img src="https://img.shields.io/badge/Yaound%C3%A9-%E2%97%8B%20Cameroon-141414.svg?style=for-the-badge&labelColor=FF6B35&color=242220" alt="Starting in Yaoundé, Cameroon" />
 </p>
+
+<p align="center">
+  <strong>▶ Live demo:</strong> <a href="https://palabre.onrender.com"><code>https://palabre.onrender.com</code></a>
+</p>
+
+> [!NOTE]
+> The demo runs on Render's free plan. After ~15 min without traffic the instance sleeps, so the very first load can take 30–60 s while it wakes up.
 
 <br />
 
